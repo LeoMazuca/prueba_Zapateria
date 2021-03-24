@@ -1,0 +1,113 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+:root {
+  --purple-dark: #170312;
+  --purple-mediunm: #33032d;
+  --purple-light: #531253;
+  --gray-light: #eaeaea;
+  --white: #f4fffd;
+}
+
+body {
+	background: #ddeefc;
+}
+::-moz-scrollbar{
+  display: none;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+.contenedor {
+	width: 90%;
+	max-width: 1000px;
+	padding: 0px 20px;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+/* ---------- Formulario Tarjeta ----------*/
+.formulario-tarjeta {
+	  margin: auto;
+	  background-color: rgba(51, 3, 45, 0.8);
+	  border-radius: 10px;
+	width: 100%;
+	max-width: 700px;
+	padding: 30px 30px 30px 30px;
+	border-radius: 10px;
+	position: relative;
+	z-index: 1;
+}
+
+.formulario-tarjeta label {
+	display: block;
+	color: #7d8994;
+	margin-bottom: 5px;
+	font-size: 16px;
+}
+
+.formulario-tarjeta input,
+.formulario-tarjeta select,
+.btn-enviar {
+	font-size: 18px;
+	height: 50px;
+	width: 100%;
+	padding: 10px;
+	transition: .3s ease all;
+	border-radius: 5px;
+	margin: 30px 0;
+	font-size: 20px;
+}
+
+.formulario-tarjeta input {
+	margin-bottom: 20px;
+	text-transform: uppercase;
+}
+
+.formulario-tarjeta .flexbox {
+	display: flex;
+	justify-content: space-between;
+}
+
+.formulario-tarjeta .expira {
+	width: 100%;
+}
+
+.formulario-tarjeta .ccv {
+	min-width: 100px;
+}
+
+.formulario-tarjeta .grupo-select {
+	width: 100%;
+	margin-right: 15px;
+	position: relative;
+}
+
+.formulario-tarjeta select {
+	-webkit-appearance: none;
+}
+
+
+.formulario-tarjeta .grupo-select:hover i {
+	color: #93bfed;
+}
+
+.formulario-tarjeta .btn-enviar {
+	border: none;
+	  background-color: var(--purple-dark);
+	  border: 0;
+	  color: var(--white);
+	  opacity: 0.8;
+	  cursor: pointer;
+	  border-radius: 20px;
+	  margin-bottom: 0.8;
+	cursor: pointer;
+}
+
+.formulario-tarjeta .btn-enviar:hover {
+	opacity: 1;
+}

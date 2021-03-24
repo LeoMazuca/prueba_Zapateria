@@ -1,0 +1,463 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-border-box;
+}
+
+:root {
+  --purple-dark: #170312;
+  --purple-mediunm: #33032d;
+  --purple-light: #531253;
+  --gray-light: #eaeaea;
+  --white: #f4fffd;
+}
+
+body {
+  font-size: 20px;
+  font-family: 'open sans', sans-serif;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+p {
+  font-size: 22px;
+}
+
+/*Header de la pagina*/
+.todas{
+  width: 100%;
+  height: 100vh;
+  background-image: url("../img/fondotodas.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  margin: 0px;
+  padding: 0px;
+}
+.nike{
+  width: 100%;
+  height: 100vh;
+  background-image: url("../img/fondonike.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  margin: 0px;
+  padding: 0px;
+}
+.menu {
+  background-color: var(--purple-mediunm);
+  width: 100%;
+  position: sticky;
+  top: 0;
+  padding: 5px;
+  z-index: 999;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  font-family: 'Noto Serif', serif;
+  font-style: italic;
+  margin-bottom: 60px;
+}
+
+.menu a {
+  display: inline-block;
+  padding: 10px 30px;
+  font-size: 26px;
+  background-color: var(--purple-mediunm);
+  margin 0 10px;
+  transition: .5s ease all;
+  color: var(--gray-light);
+  text-decoration: none;
+}
+
+.menu a:hover {
+  transform: translateY(18px);
+  background-color: var(--purple-light);
+}
+
+.redes-sociales {
+	padding: 10px;
+	background-color: var(--purple-light);
+}
+
+.redes-sociales img {
+	padding: 5px;
+	border-radius: 100%;
+	width: 50px;
+	transition: .3s ease all;
+}
+
+.redes-sociales img:hover {
+	transform: scale(1.2);
+}
+
+/* Mediaqueries */
+@media screen and (max-width: 992px) {
+	p {
+		font-size: 18px;
+	}
+
+	.contenido-header .texto {
+		font-size: 60px;
+	}
+
+	.menu a {
+		font-size: 20px;
+	}
+}
+a {
+  text-decoration: none;
+}
+
+
+.contacto {
+	margin-bottom: 30px;
+}
+.contacto img{
+  width: 40px;
+  height: 40px;
+  margin: 3px;
+}
+
+.redes-sociales {
+	padding: 10px;
+	background-color: var(--purple-light);
+}
+
+.redes-sociales img {
+	padding: 5px;
+	border-radius: 100%;
+	width: 50px;
+	transition: .3s ease all;
+}
+
+.redes-sociales img:hover {
+	transform: scale(1.2);
+}
+
+/*indice de las marcas*/
+header .barra-busqueda {
+	width: 70%;
+	height: 40px;
+	line-height: 40px;
+	background: #fff;
+	padding: 0 20px;
+	border-radius: 100px;
+	border: none;
+	text-align: center;
+	font-size: 16px;
+}
+
+header .categorias {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+header .categorias a {
+	color: #9B9B9B;
+	margin: 10px 20px;
+	font-size: 18px;
+	font-weight: 700;
+  text-decoration: none;
+}
+
+header .categorias a.activo {
+	color: #000;
+}
+.contenedor{
+  width: 90%;
+  max-width: 800px;
+  margin: auto;
+}
+/*grid*/
+.grid {
+	position: relative;
+	width: 100%;
+	opacity: 0;
+	transition: opacity 0.5s linear 1s;
+}
+
+.grid.imagenes-cargadas {
+	opacity: 1;
+}
+
+.grid .item {
+	position: absolute;
+	display: block;
+	padding: 0;
+	margin: 10px;
+	width: calc(25% - 20px);
+}
+.grid .item-contenido {
+	position: relative;
+}
+.grid img{
+  width: 150px;
+  height: 150px;
+  background-color: black;
+}
+.grid img:hover{
+  opacity: .7;
+}
+.grid .item img {
+/*	width: 100%;*/
+	cursor: pointer;
+	vertical-align: top;
+}
+.overlay {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(0,0,0,.9);
+	width: 100%;
+	height: 100vh;
+	display: none;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+  z-index: 999;
+}
+.overlay.activo {
+	display: flex;
+  z-index: 999;
+}
+
+.overlay img {
+	max-width: 500px;
+  z-index: 999;
+}
+
+.overlay .descripcion {
+	display: block;
+  z-index: 999;
+	background: #fff;
+	padding: 20px;
+	text-align: center;
+	margin-top: 5px;
+	border-radius: 10px;
+	max-width: 50%;
+}
+
+.contenedor-img {
+	position: relative;
+}
+
+.overlay #btn-cerrar-popup {
+	background: none;
+	font-size: 20px;
+	color: white;
+	border: none;
+	cursor: pointer;
+	position: absolute;
+	right: -20px;
+	top: -20px;
+  z-index: 999;
+}
+.galeria{
+  margin-top: 40px;
+}
+/*Mostrar productos*/
+.bodyAdidas{
+  background-image: url("../img/fondoAdidas2.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  height: 100vh;
+}
+.bodyNike{
+  background-image: url("../img/fondoNike2.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  height: 100vh;
+}
+.adidas{
+  width: 100%;
+  height: 100vh;
+  background-image: url("../img/fondoAdidas.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  margin: 0px;
+  padding: 0px;
+}
+.bodyConverse{
+  background-image: url("../img/fondoConverse2.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  height: 100vh;
+}
+.converse{
+  width: 100%;
+  height: 100vh;
+  background-image: url("../img/fondoConverse.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  margin: 0px;
+  padding: 0px;
+}
+
+.bodyDc{
+  background-image: url("../img/fondoDc2.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  height: 100vh;
+}
+.dc{
+  width: 100%;
+  height: 100vh;
+  background-image: url("../img/fondoDc.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  margin: 0px;
+  padding: 0px;
+}
+.bodyUnderArmor{
+  background-image: url("../img/fondoUnderArmor2.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  height: 100vh;
+}
+.underArmor{
+  width: 100%;
+  height: 100vh;
+  background-image: url("../img/fondoUnderArmor.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  margin: 0px;
+  padding: 0px;
+}
+.bodyEverlast{
+  background-image: url("../img/fondoEverlast2.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  height: 100vh;
+}
+.everlast{
+  width: 100%;
+  height: 100vh;
+  background-image: url("../img/fondoEverlast.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  margin: 0px;
+  padding: 0px;
+}
+.bodyPuma{
+  background-image: url("../img/fondoPuma2.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  height: 100vh;
+}
+.puma{
+  width: 100%;
+  height: 100vh;
+  background-image: url("../img/fondoPuma.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  margin: 0px;
+  padding: 0px;
+}
+.bodyVans{
+  background-image: url("../img/fondoVans.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  height: 100vh;
+}
+.vans{
+  width: 100%;
+  height: 100vh;
+  background-image: url("../img/fondoVans2.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  margin: 0px;
+  padding: 0px;
+}
+.mostrarProductos{
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  width: 80%;
+  align-self: center;
+
+}
+.imagenProducto{
+  margin: 10px;
+  width: 50%;
+}
+.mostrarProductos img{
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+.descripcionProductos{
+  font-family: 'Noto Serif', serif;
+  color: var(--white);
+  width: 50%;
+  padding: 50px;
+  background-color: var(--purple-mediunm);
+  border-radius: 15px;
+  margin: 10px;
+  background-color: rgba(51, 3, 45, 0.8);
+}
+.descripcionProductos input:hover{
+  opacity: 1;
+}
+.descripcionProductos input:active{
+transform: scale(.95);
+border-radius: 0px;
+}
+.descripcionProductos input{
+  width: 50%;
+  height: 25px;
+  font-size: 15px;
+  padding: 0px;
+  background-color: var(--purple-dark);
+  border: 0;
+  color: var(--white);
+  opacity: 0.8;
+  cursor: pointer;
+  border-radius: 20px;
+  margin-bottom: 0.8;
+
+}
